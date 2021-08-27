@@ -44,7 +44,6 @@ def get_members(config):
             return None
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
-    """Set up the sensor platform."""
     members = get_members(config)
     entities = []
     for member in members:
@@ -56,8 +55,6 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
     
 
 class ZeroTier(Entity):
-    """Representation of a Sensor."""
-
     def __init__(self, hass, config, member):
         """Initialize the sensor."""
         self.network = config.get(CONF_NETWORK)
@@ -69,7 +66,6 @@ class ZeroTier(Entity):
 
     @property
     def name(self):
-        """Return the name of the sensor."""
         return f'ZT-{self.member_data["name"]}'
     
     @property
@@ -83,7 +79,6 @@ class ZeroTier(Entity):
     
     @property
     def is_on(self):
-        """Return the state of the sensor."""
         return self.member_data["online"]
 
     @property
@@ -102,9 +97,6 @@ class ZeroTier(Entity):
             return "mdi:lan-disconnect"
     
     def _update(self, now = None):
-        """Fetch new state data for the sensor.
-        This is the only method that should fetch new data for Home Assistant.
-        """
         _url = f"{url}/network/{self.network}/member/{self.member}"
         try:
             resp = r.get(_url, headers = self.header)
