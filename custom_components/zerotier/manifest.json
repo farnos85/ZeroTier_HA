@@ -1,0 +1,10 @@
+{
+    "domain": "ZeroTier",
+    "name": "ZeroTier Sensor",
+    "documentation": "",
+    "dependencies": [],
+    "codeowners": ["@farnos85"],
+    "requirements": [],
+    "iot_class": "cloud_polling",
+    "version": "0.1.1"
+}
