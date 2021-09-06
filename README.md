@@ -9,6 +9,6 @@ This Home Assistant integration, expose all devices found in given ZeroTier netw
 
 in configuration.yaml insert:
 
-	ZeroTier:
-	  network: <ZeroTier network id>
-	  token: <your ZeroTier API token>
+	- platform: ZeroTier
+	  network: <your ZeroTier network id>
+	  api_token: <your ZeroTier API token>
