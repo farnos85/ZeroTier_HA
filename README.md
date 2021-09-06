@@ -7,9 +7,8 @@ This Home Assistant integration, expose all devices found in given ZeroTier netw
 - Remote IP
 - Last connection time
 
-Setup:
 in configuration.yaml insert:
 
-ZeroTier:
-  network: <ZeroTier network id>
-  token: <your ZeroTier API token>
+	ZeroTier:
+	  network: <ZeroTier network id>
+	  token: <your ZeroTier API token>
