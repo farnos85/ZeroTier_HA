@@ -1,7 +1,8 @@
 {
     "domain": "ZeroTier",
     "name": "ZeroTier Sensor",
-    "documentation": "",
+    "documentation": "https://github.com/farnos85/ZeroTier_HA",
+    "issue_tracker": "https://github.com/farnos85/ZeroTier_HA/issues",
     "dependencies": [],
     "codeowners": ["@farnos85"],
     "requirements": [],
